@@ -99,7 +99,9 @@ function drawText(
   }
 
   const drawFunction =
-    config.drawStyle === 'fill' ? ctx.fillText : ctx.strokeText
+    config.drawStyle === 'fill'
+      ? ctx.fillText.bind(ctx)
+      : ctx.strokeText.bind(ctx)
 
   //print all lines of text
   textArray.forEach((txtline) => {
