@@ -9,6 +9,7 @@ export interface CanvasTextConfig {
   debug?: boolean
   align?: 'left' | 'center' | 'right'
   vAlign?: 'top' | 'middle' | 'bottom'
+  drawStyle?: 'fill' | 'outline'
   fontSize?: number
   fontWeight?: string
   fontStyle?: string
@@ -22,6 +23,7 @@ const defaultConfig = {
   debug: false,
   align: 'center',
   vAlign: 'middle',
+  drawStyle: 'fill',
   fontSize: 14,
   fontWeight: '',
   fontStyle: '',
@@ -34,7 +36,7 @@ const defaultConfig = {
 function drawText(
   ctx: CanvasRenderingContext2D,
   myText: string,
-  inputConfig: CanvasTextConfig
+  inputConfig: CanvasTextConfig,
 ) {
   const { width, height, x, y } = inputConfig
   const config = { ...defaultConfig, ...inputConfig }
@@ -95,10 +97,14 @@ function drawText(
     debugY = y + height / 2
     txtY -= negOffset
   }
+
+  const drawFunction =
+    config.drawStyle === 'fill' ? ctx.fillText : ctx.strokeText
+
   //print all lines of text
   textArray.forEach((txtline) => {
     txtline = txtline.trim()
-    ctx.fillText(txtline, textAnchor, txtY)
+    drawFunction(txtline, textAnchor, txtY)
     txtY += charHeight
   })
 

@@ -134,6 +134,7 @@ const { drawText, getTextHeight, splitText } = window.canvasTxt
 |    `debug`    |   `false`    | Shows the border and align gravity for debugging purposes                      |
 |    `align`    |   `center`   | Text align. Other possible values: `left`, `right`                             |
 |   `vAlign`    |   `middle`   | Text vertical align. Other possible values: `top`, `bottom`                    |
+|  `drawStyle`  |    `fill`    | Text draw style. Other possible values: `outline`                              |
 |    `font`     |   `Arial`    | Font family of the text                                                        |
 |  `fontSize`   |     `14`     | Font size of the text in px                                                    |
 |  `fontStyle`  |     `''`     | Font style, same as css font-style. Examples: `italic`, `oblique 40deg`        |
