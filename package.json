@@ -42,18 +42,18 @@
     "es6"
   ],
   "devDependencies": {
-    "@types/lodash": "^4.14.182",
-    "@vitejs/plugin-vue": "^3.0.1",
-    "canvas": "^2.11.2",
-    "element-plus": "^2.2.12",
-    "lodash": "^4.17.21",
-    "tsup": "^7.2.0",
-    "typescript": "^4.7.4",
-    "unplugin-auto-import": "^0.11.0",
-    "unplugin-vue-components": "^0.22.0",
-    "vite": "^4.4.4",
-    "vite-node": "^0.33.0",
-    "vue": "^3.2.37"
+    "@types/lodash": "^4.17.26",
+    "@vitejs/plugin-vue": "^6.0.10",
+    "canvas": "^3.2.3",
+    "element-plus": "^2.14.7",
+    "lodash": "^4.18.1",
+    "tsup": "^9.0.0",
+    "typescript": "^5.9.3",
+    "unplugin-auto-import": "^21.1.0",
+    "unplugin-vue-components": "^32.1.0",
+    "vite": "^8.3.4",
+    "vite-node": "^6.0.0",
+    "vue": "^3.5.44"
   },
   "dependencies": {}
 }
